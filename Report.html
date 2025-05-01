@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #004d26;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: white;
+            color: #004d26;
+            padding: 15px 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .logo {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .container {
+            margin-top: 30px;
+            padding: 0 20px;
+        }
+
+        .section {
+            text-align: right;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 900px;
+            direction: rtl;
+        }
+
+        .section h2 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .back {
+            background: red;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .back:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="LOGO.PNG" alt="Logo" class="logo">
+        <div>Ministry of Investment</div>
+    </div>
+
+    <div class="container">
+        
+        <div class="section">
+            <h2>Infrastructure </h2>
+            <p>
+                البنية التحتية هي الأساس اللي تعتمد عليه كل الخدمات التقنية. أي نظام، سواء داخلي أو خارجي، لازم يمر بالبنية التحتية. حتى لو الخدمة مستضافة خارج الوزارة، نحتاج نفعّل لها الراوترات، السويتشات، والجدران النارية.
+                <br><br>
+                <strong>مكوناتها الرئيسية:</strong><br>
+                1. Network<br>
+                2. Security<br>
+                3. Infra<br><br>
+
+                <strong>أمثلة:</strong><br>
+                • البريد الإلكتروني (تصفية، نسخ احتياطي)<br>
+                • Active Directory (التحكم بالصلاحيات)<br>
+                • غرفة الطوارئ (Disaster Recovery)<br>
+                • Multi-cloud (علي بابا، ديم، سداد)<br>
+                • مركز البيانات (Data Center)
+            </p>
+        </div>
+
+        <div class="section">
+            <h2> Network </h2>
+            <p>
+                الشبكة توصل الأنظمة والخدمات داخل الوزارة. تنقل البيانات بين الموظفين والأنظمة والجهات الخارجية بأمان وسرعة.
+                <br><br>
+                <strong>أقسام الشبكة:</strong><br>
+                • LAN: تربط أجهزة مبنى الوزارة<br>
+                • WAN: تربط فروع الوزارة والجهات الخارجية<br>
+                • DMZ: للأنظمة اللي تتواصل مع الإنترنت، تشمل أدوات مثل Proxy, DLP, FireEye, Email Filtering<br><br>
+
+                <strong>نقاط الوصول:</strong><br>
+                توفر واي فاي، وبعضها يكشف الأجهزة الغريبة.<br><br>
+
+                <strong>الحماية:</strong><br>
+                • Proxy لتصفية التصفح<br>
+                • مزودي إنترنت متعددين (STC، موبايلي) لضمان الاستمرارية
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Security</h2>
+            <p>
+                الأمن السيبراني يحمي كل أجزاء التقنية من التهديدات. هدفه تحقيق: السرية (Confidentiality)، السلامة (Integrity)، التوفر (Availability).
+                <br><br>
+                <strong>أنواع الحماية:</strong><br>
+                1. وقائي (مثل الجدران النارية)<br>
+                2. كاشف (مثل SIEM)<br>
+                3. تصحيحي (استرجاع النسخ الاحتياطية)<br>
+                4. تعويضي (مثل MFA البديلة)<br><br>
+
+                <strong>أمثلة:</strong><br>
+                • فحص الرسائل قبل استلامها<br>
+                • MDM وMAM للتحكم في أجهزة وتطبيقات الموظفين<br>
+                • Endpoint Security مثل Symantec وEDR لعزل أي تهديد مباشرة
+            </p>
+        </div>
+
+        <a href="Infra.html" class="back">Back to Main Page</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mind Map</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #004d26;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: white;
+      color: #004d26;
+      padding: 15px 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .logo {
+      width: 50px;
+      margin-right: 15px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+
+    .mindmap-container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 40px;
+      margin: 40px auto;
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    .main-topic {
+      background-color: #ffffff;
+      color: #004d26;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative;
+      width: 400px;
+      flex-shrink: 0;
+    }
+
+    .subtopics {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .subtopic-container {
+      margin: 10px 0;
+    }
+
+    .subtopic-label {
+      display: block;
+      background-color: #e6f0ff;
+      color: #004d26;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      transition: background 0.2s;
+    }
+
+    .subtopic-label:hover {
+      background-color: #d6e7ff;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"] + .subtopic-label + .detail {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + .subtopic-label + .detail {
+      display: block;
+    }
+
+    .detail {
+      color: #339966;
+      font-size: 14px;
+      margin: 4px 0 0 15px;
+    }
+
+    .back {
+      background: red;
+      padding: 10px 25px;
+      margin: 50px auto;
+      border-radius: 10px;
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.2s;
+    }
+
+    .back:hover {
+      background: darkred;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="LOGO.PNG" alt="Logo" class="logo">
+    <div>Ministry of Investment</div>
+  </div>
+
+  <h1> Infrastructure Mind Map</h1>
+
+  <div class="mindmap-container">
+
+    <!-- Infrastructure -->
+    <div class="main-topic">
+      Infrastructure
+      <div class="subtopics">
+        <div class="subtopic-container">
+          <input type="checkbox" id="infra1">
+          <label class="subtopic-label" for="infra1">Definition & Role</label>
+          <div class="detail">
+            It is a technical infrastructure that supports all servers and the services running on them, whether internal or external. 
+            Even if a service is hosted outside the ministry, using it requires activating key components such as routers, switching, and firewalls.
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="infra2">
+          <label class="subtopic-label" for="infra2">Components</label>
+          <div class="detail">
+            • Network<br>
+            • Security<br>
+            • Infra Systems<br>
+            Without the infrastructure layer, these components cannot function effectively or securely.
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="infra3">
+          <label class="subtopic-label" for="infra3">Email exchange</label>
+          <div class="detail">
+            • Handles internal and external (email gateway) communication<br>
+            • Ensures secure email delivery<br>
+            • Applies services like:<br>
+            – Spam filtering<br>
+            – Data Loss Prevention (DLP)<br>
+            – Email backups
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="infra4">
+          <label class="subtopic-label" for="infra4">Active directory</label>
+          <div class="detail">
+            A core infrastructure service that controls user identities and access across systems.<br>
+            • Manages user access and permissions<br>
+            • Controls who can access what in ministry systems
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="infra5">
+          <label class="subtopic-label" for="infra5">Disaster recovery room</label>
+          <div class="detail">
+            • Physical Servers: The hardware that runs internal systems like HR<br>
+            • Power Backup: Keeps systems running during power issues<br>
+            • Cooling: Air circulation in the room<br>
+            • Redundancy: Backup systems take over immediately when one fails
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="infra6">
+          <label class="subtopic-label" for="infra6">Multi-Cloud</label>
+          <div class="detail">
+            The Ministry uses multiple cloud providers:<br>
+            • Alibaba Cloud<br>
+            • Deem<br>
+            • Cloud4C<br>
+            • SADAD<br>
+            This ensures availability, security, and avoids relying on just one provider.
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="infra7">
+          <label class="subtopic-label" for="infra7">Data Center & Server Room</label>
+          <div class="detail">
+            • Hosts internal systems<br>
+            • Includes cooling, power backup, and redundancy
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Network -->
+    <div class="main-topic">
+      Network
+      <div class="subtopics">
+        <div class="subtopic-container">
+          <input type="checkbox" id="net1">
+          <label class="subtopic-label" for="net1">Definition & Role</label>
+          <div class="detail">
+            A core part of the infrastructure department that connects all systems, devices, and services within the ministry.
+            It includes routers, switches and internet connections, enabling secure communication and data transfer between users, servers, and external systems.
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="net2">
+          <label class="subtopic-label" for="net2">DMZ</label>
+          <div class="detail">
+            Refers to a secure area in MISA’s network that hosts systems needing external access while protecting the internal network.<br>
+            • Blue Coat Proxy – Filters web traffic<br>
+            • Forcepoint DLP – Prevents data loss<br>
+            • FireEye – Detects threats and malware<br>
+            • Email Filtering – Scans and protects email traffic
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="net3">
+          <label class="subtopic-label" for="net3">WAN</label>
+          <div class="detail">
+            Connects ministry sites and external entities over long distances. Managed by the network department to ensure stable and secure communication.<br>
+            Examples: Riyadh-Front, Madinah – Ministry branches connected through WAN.
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="net4">
+          <label class="subtopic-label" for="net4">LAN</label>
+          <div class="detail">
+            The internal network that connects all devices—like employee computers, printers, and internal servers—within ministry buildings.
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="net5">
+          <label class="subtopic-label" for="net5">Access Points</label>
+          <div class="detail">
+            Provide wireless connectivity in MISA’s network.<br>
+            Some are equipped with sensors (seen as small devices on the ceiling) that detect and alert when unknown or unregistered devices attempt to connect, helping enhance network security.
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="net6">
+          <label class="subtopic-label" for="net6">Network security & traffic management</label>
+          <div class="detail">
+            • Proxy: Filters internet use and applies browsing policies<br>
+            • Internet Redundancy: Uses STC, Mobily, and Hybrid Links for continuous internet—if one fails, others take over
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security -->
+    <div class="main-topic">
+      Security
+      <div class="subtopics">
+        <div class="subtopic-container">
+          <input type="checkbox" id="sec1">
+          <label class="subtopic-label" for="sec1">Definition & Purpose</label>
+          <div class="detail">
+            Refers to the protection of IT systems and networks in the infrastructure department to prevent, detect, and respond to cyber threats,
+            while ensuring the confidentiality, integrity, and availability (CIA) of data.
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="sec2">
+          <label class="subtopic-label" for="sec2">Types of Security Controls</label>
+          <div class="detail">
+            • Preventive: Stop attacks before they happen (like firewalls)<br>
+            • Detective: Discover incidents during or after (like SIEM)<br>
+            • Corrective: Fix and recover from attacks (like backups)<br>
+            • Compensating: Alternative control when main one can’t be used
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="sec3">
+          <label class="subtopic-label" for="sec3">Email Security Process</label>
+          <div class="detail">
+            Incoming emails go through a layered security process:<br>
+            1. Bitdefender checks the reputation of the sender<br>
+            2. FireEye scans content in a sandbox<br>
+            3. If clean, the email is passed to Exchange server for delivery
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="sec4">
+          <label class="subtopic-label" for="sec4">Endpoint Security</label>
+          <div class="detail">
+            • EDR (Endpoint Detection & Response): Detects threats<br>
+            • Antivirus software to block malware<br>
+            • Symantec Endpoint isolates infected devices
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="sec5">
+          <label class="subtopic-label" for="sec5">Identity & Access Control</label>
+          <div class="detail">
+            • Access is controlled by checking identity and permissions<br>
+            • NAC checks the device before allowing access<br>
+            • VPN allows safe connection from outside the ministry
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="sec6">
+          <label class="subtopic-label" for="sec6">MDM & Mobile Security</label>
+          <div class="detail">
+            • MDM secures and manages mobile devices<br>
+            • MAM: Controls access to apps<br>
+            • MPM: Enforces security rules<br>
+            • Device Management: Allows only trusted devices
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="sec7">
+          <label class="subtopic-label" for="sec7">MFA</label>
+          <div class="detail">
+            • Adds extra step to login (code from app/phone)<br>
+            • Prevents access even if password is leaked<br>
+            • Extra layer of protection for sensitive systems
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="sec8">
+          <label class="subtopic-label" for="sec8">Traffic Filtering and Entry Points</label>
+          <div class="detail">
+            • Proxy filters web access and blocks harmful websites<br>
+            • Firewalls apply rules to allow/deny traffic based on content/source
+          </div>
+        </div>
+        <div class="subtopic-container">
+          <input type="checkbox" id="sec9">
+          <label class="subtopic-label" for="sec9">Intrusion and Attack Prevention</label>
+          <div class="detail">
+            • IPS (Intrusion Prevention System) blocks malicious activity<br>
+            • DDoS protection defends against overload and shutdown attacks
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="center">
+    <a href="Infra.html" class="back">Back to Main Page</a>
+  </div>
+
+</body>
+</html>
